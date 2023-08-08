@@ -215,7 +215,11 @@ hr {
     align-items: flex-start;
     gap: 32px;
 }
-
+.caption_desc{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
 .caption .fill {
     display: none;
 }
