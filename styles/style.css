@@ -247,7 +247,6 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 24px 24px 32px 24px;
     background-color: #EAECF0;
     border-radius: 16px;
     border: 1px solid #EAECF0;
@@ -257,6 +256,9 @@ hr {
 }
 
 .pricing_card--head__heading {
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-left: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -286,13 +288,13 @@ hr {
     font-weight: 400;
     line-height: 24px;
 }
-
+.pricing_card--body{
+    padding:32px 24px 24px 24px;
+}
 .pricing_card--body ul {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding-top: 32px;
-    padding-bottom: 24px;
     list-style: none;
 }
 
@@ -309,7 +311,7 @@ hr {
 }
 
 .pricing_card--tail {
-    padding-top: 24px;
+    padding:24px 24px 24px 32px;
     margin-top: auto;
     background-color: #F9FAFB;
     width: 100%;
@@ -483,7 +485,7 @@ hr {
     list-style: none;
 }
 
-/* Media Queri  - pc*/
+/* Media Queri  - md*/
 
 @media screen and (min-width: 768px) {
     :root {
@@ -495,8 +497,10 @@ hr {
 
 /* Universal  */
     button {
+        font:unset;
         max-width: 150px;
         padding: 16px 28px;
+        font-size: var(--font-size-base);
         background: var(--color-primary);
         line-height: 28px;
         border-radius: 8px;
@@ -588,7 +592,8 @@ hr {
         font-weight: 600;
         line-height: 24px;
         border-radius: 8px;
-        border: 1px solid #fff;
+        border: 0px solid transparent;
+        box-shadow: none;
     }
 
     .hero-signup {
@@ -638,12 +643,18 @@ hr {
 
     .hero__heading--btn__1 {
         order: 2;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px; 
     }
 
     .hero__heading--btn__2 {
         background: #FFF;
         margin-top: 0px;
         order: 1;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px; 
     }
 
     .hero__graphics_pc {
@@ -762,8 +773,12 @@ hr {
     }
 
  /* CHAT  */
+    .chat_sec{
+        background-color:  #F9FAFB;
+    }
     .chat {
-        flex-direction: row;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
         gap: 96px;
     }
 
@@ -822,4 +837,33 @@ hr {
         align-self: flex-end;
     }
 
+}
+
+
+@media screen and (min-width: 500px  ) and (max-width:1024px) {
+    .stats {
+        align-items: flex-start;
+        gap: 64px;
+    }
+
+    .stats_card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 96px;
+    }
+
+    .stats__card--con {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 64px;
+        column-gap: 32px;
+    }
+
+    .stats__card--con-item h1 {
+        font-size: var(--font-size-3xl);
+        font-weight: 600;
+        line-height: 72px;
+        letter-spacing: -1.2px;
+        padding-bottom: 12px;
+    }
 }
