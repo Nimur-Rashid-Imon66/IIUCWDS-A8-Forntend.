@@ -310,6 +310,8 @@ hr {
 
 .pricing_card--tail {
     padding-top: 24px;
+    margin-top: auto;
+    background-color: #F9FAFB;
     width: 100%;
 }
 
@@ -371,16 +373,15 @@ hr {
 
 .chat_box {
     display: flex;
-
     flex-direction: column;
     gap: 40px;
 }
 
 .chat_box-item {
     display: flex;
+    align-items: flex-start;
     gap: 16px;
 }
-
 .chat_box-item--txt {
     display: flex;
     flex-direction: column;
@@ -683,6 +684,12 @@ hr {
     }
 
     .caption .fill {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden
+    }
+    .stats_card .fill {
         display: flex;
         justify-content: center;
         align-items: center;
